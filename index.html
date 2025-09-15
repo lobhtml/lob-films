@@ -8,7 +8,13 @@
   <meta name="author" content="Luke O'Brien">
   <meta name="description" content="LOB Films Official Website">
   <link rel="icon" type="image/png" href="LOB_FILMS_ICON.png">
+
   <style>
+    @font-face {
+      font-family: bedstead;
+      src: url(bedstead.regular.otf);
+    }
+
     body {
       background-color: black;
       color: white;
@@ -19,16 +25,12 @@
       color: white;
     }
 
-    h2 {
+    h3 {
       margin-top: 0;
     }
 
     h4 {
       color: grey;
-    }
-
-    p {
-      color: hsl(0, 0%, 85%);
     }
 
     .top-img {
@@ -40,6 +42,29 @@
     .top-img img {
       width: 400px;
       max-width: 100%;
+    }
+
+    .nav-main {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+      font-family: bedstead, monospace;
+    }
+
+    .nav-main a {
+      color: grey;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .nav-main a:hover {
+      color: white;
+    }
+
+    .nav-main a[aria-current="page"] {
+      color: white;
     }
 
     .nav1 {
@@ -55,23 +80,23 @@
       color: grey;
       text-decoration: none;
       font-size: 20px;
+      font-family: bedstead, monospace;
     }
 
     .nav1 a:hover {
-      color: white;
+      color: rgb(0, 255, 0);
     }
 
-    .nav1 .active {
-      color: white;
+    .nav1 a[aria-current="page"] {
+      color: rgb(0, 255, 0);
     }
 
     .film-data {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
-      margin-left: 100px;
-      margin-right: 100px;
       gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
     }
 
     .film-data img {
@@ -81,6 +106,10 @@
       max-width: 100%;
       flex-shrink: 0;
       object-fit: cover;
+    }
+
+    .film-data p {
+      color: hsl(0, 0%, 85%);
     }
 
     .button1 {
@@ -99,6 +128,9 @@
     footer {
       text-align: center;
       margin: 40px;
+    }
+
+    footer p {
       color: grey;
     }
 
@@ -116,6 +148,7 @@
       }
     }
   </style>
+</head>
 
 <body>
   <!--Header-->
@@ -123,33 +156,42 @@
     <img src="LOB_FILMS_V3_ALT.png" alt="LOB Films Logo">
   </div>
 
-  <div class="nav1">
-    <a href="index.html" class="active">2025/26 Films</a>
-    <a href="films21-22.html">2021/22 Films</a>
-  </div>
+  <nav class="nav-main">
+    <a href="index.html">ABOUT</a>
+    <a href="index.html" aria-current="page">FILMS</a>
+    <a href="index.html">CONTACT</a>
+  </nav>
+
+  <nav class="nav1">
+    <a href="index.html" aria-current="page">2025/26</a>
+    <a href="index.html">2021/22</a>
+  </nav>
   <!--Header end-->
   <!--Films-->
-  <div class="film-data">
-    <img src="img25-26/Zombie-film25-1.jpg" alt="The Beginning short film">
-    <div>
-      <h2>The Beginning</h2>
-      <h4>Uploaded 2 Sept 2025</h4>
-      <p>A lab technician falls victim to a biocontainment breach at the New Hilltown Centre for Experimental Pathogen
-        Research (CEPR). A deadly mutated pathogen escaped. The military have been deployed to contain the outbreak… It
-        is not yet known whether the reanimated dead have reached the city.</p>
-      <a href="https://www.youtube.com/watch?v=w0XaZx2geew" target="_blank" class="button1">Watch film (2m)</a>
+  <main>
+    <div class="film-data">
+      <img src="img25-26/Zombie-film25-1.jpg" alt="The Beginning short film">
+      <div>
+        <h3>The Beginning</h3>
+        <h4>Uploaded 2 Sept 2025</h4>
+        <p>A lab technician falls victim to a biocontainment breach at the New Hilltown Centre for Experimental Pathogen
+          Research (CEPR). A deadly mutated pathogen escaped. The military have been deployed to contain the outbreak…
+          It
+          is not yet known whether the reanimated dead have reached the city.</p>
+        <a href="https://www.youtube.com/watch?v=w0XaZx2geew" target="_blank" class="button1">Watch film (2m)</a>
+      </div>
     </div>
-  </div>
-  <div class="film-data">
-    <img src="img25-26/end5.jpg" alt="The Disappearance of Thomas McCarthy (4/4) short film">
-    <div>
-      <h2>The Disappearance of Thomas McCarthy (4/4)</h2>
-      <h4>Uploaded 17 Aug 2025</h4>
-      <p>All the evidence points to local storeowner Andy Kowalczyk as a paranormal hoax is uncovered… Questions about
-        the whereabouts of Thomas McCarthy and the involvement of a religious cult are finally answered.</p>
-      <a href="https://www.youtube.com/watch?v=3vya1X20OpQ" target="_blank" class="button1">Watch film (4m)</a>
+    <div class="film-data">
+      <img src="img25-26/end5.jpg" alt="The Disappearance of Thomas McCarthy (4/4) short film">
+      <div>
+        <h3>The Disappearance of Thomas McCarthy (4/4)</h3>
+        <h4>Uploaded 17 Aug 2025</h4>
+        <p>All the evidence points to local storeowner Andy Kowalczyk as a paranormal hoax is uncovered… Questions about
+          the whereabouts of Thomas McCarthy and the involvement of a religious cult are finally answered.</p>
+        <a href="https://www.youtube.com/watch?v=3vya1X20OpQ" target="_blank" class="button1">Watch film (4m)</a>
+      </div>
     </div>
-  </div>
+  </main>
   <!--Films end-->
   <!--Footer-->
   <footer>
