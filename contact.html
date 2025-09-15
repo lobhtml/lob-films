@@ -2,12 +2,13 @@
 <html>
 
 <head>
-  <title>2025/26 - LOB Films</title>
+  <title>Contact - LOB Films</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Luke O'Brien">
   <meta name="description" content="LOB Films Official Website">
   <link rel="icon" type="image/png" href="LOB_FILMS_ICON.png">
+  <link rel="stylesheet" href="form.css">
 
   <style>
     @font-face {
@@ -30,7 +31,7 @@
       margin-top: 0;
     }
 
-    h3 {
+    h4 {
       color: grey;
     }
 
@@ -69,40 +70,6 @@
       color: white;
     }
 
-    .film-data {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
-      margin: 20px auto;
-    }
-
-    .film-data img {
-      width: 500px;
-      height: auto;
-      aspect-ratio: 16 /9;
-      max-width: 100%;
-      flex-shrink: 0;
-      object-fit: cover;
-    }
-
-    .film-data p {
-      color: hsl(0, 0%, 85%);
-    }
-
-    .button1 {
-      background-color: grey;
-      padding: 12px;
-      text-decoration: none;
-      display: inline-block;
-      border-radius: 20px;
-      margin-top: auto;
-    }
-
-    .button1:hover {
-      background-color: red;
-    }
-
     footer {
       text-align: center;
       margin: 40px;
@@ -121,7 +88,7 @@
         margin-bottom: 40px;
       }
 
-      h3 {
+      h2 {
         margin-top: 20px;
       }
     }
@@ -136,37 +103,24 @@
 
   <nav class="nav-main">
     <a href="index.html">ABOUT</a>
-    <a href="index.html" aria-current="page">FILMS</a>
-    <a href="contact.html">CONTACT</a>
+    <a href="index.html">FILMS</a>
+    <a href="index.html" aria-current="page">CONTACT</a>
   </nav>
 
   <!--Header end-->
-  <!--Films-->
-  <main>
-    <div class="film-data">
-      <img src="img25-26/Zombie-film25-1.jpg" alt="The Beginning short film">
-      <div>
-        <h3>The Beginning</h3>
-        <h4>Uploaded 2 Sept 2025</h4>
-        <p>A lab technician falls victim to a biocontainment breach at the New Hilltown Centre for Experimental Pathogen
-          Research (CEPR). A deadly mutated pathogen escaped. The military have been deployed to contain the outbreak…
-          It
-          is not yet known whether the reanimated dead have reached the city.</p>
-        <a href="https://www.youtube.com/watch?v=w0XaZx2geew" target="_blank" class="button1">Watch film (2m)</a>
-      </div>
-    </div>
-    <div class="film-data">
-      <img src="img25-26/end5.jpg" alt="The Disappearance of Thomas McCarthy (4/4) short film">
-      <div>
-        <h3>The Disappearance of Thomas McCarthy (4/4)</h3>
-        <h4>Uploaded 17 Aug 2025</h4>
-        <p>All the evidence points to local storeowner Andy Kowalczyk as a paranormal hoax is uncovered… Questions about
-          the whereabouts of Thomas McCarthy and the involvement of a religious cult are finally answered.</p>
-        <a href="https://www.youtube.com/watch?v=3vya1X20OpQ" target="_blank" class="button1">Watch film (4m)</a>
-      </div>
-    </div>
-  </main>
-  <!--Films end-->
+  <!--Contact-->
+  <form action="https://formspree.io/f/mzzaqabd" method="POST">
+    <label>
+      <p>Your email:</p>
+      <input type="email" name="email">
+    </label>
+    <label>
+      <p>Your message:</p>
+      <textarea name="message"></textarea>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+  <!--Contact end-->
   <!--Footer-->
   <footer>
     <p>&copy; <span id="year"></span> LOB Films</p>

@@ -1,0 +1,41 @@
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    form label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label p {
+      margin: 5px 0;
+    }
+
+    form input {
+      height: 30px;
+      font-family: sans-serif;
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      height: 150px;
+      font-family: sans-serif;
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      width: 100px;
+      height: 35px;
+    }
+
+    form button:hover {
+      cursor: pointer;
+    }
